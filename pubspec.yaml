@@ -15,14 +15,18 @@ dependencies:
     sdk: flutter
   # Cupertino stili iOS ikonları
   cupertino_icons: ^1.0.8
+  json_annotation: ^4.9.0
+  equatable: ^2.0.5
 
 # Geliştirme ve test süreçlerinde kullanılır
 # Uygulamanın çalışması sırasında gerekli değildir.
 # Derlenmiş projeye dahil edilmez.
 dev_dependencies:
+  build_runner: ^2.4.13
   flutter_test:
     sdk: flutter
   # Linting & Code Quality
+  json_serializable: ^6.8.0
   very_good_analysis: ^6.0.0
 
 flutter:
