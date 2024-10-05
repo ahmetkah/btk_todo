@@ -17,6 +17,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   json_annotation: ^4.9.0
   equatable: ^2.0.5
+  dio: ^5.7.0
+  retrofit: ^4.4.1
+  pretty_dio_logger: ^1.4.0
 
 # Geliştirme ve test süreçlerinde kullanılır
 # Uygulamanın çalışması sırasında gerekli değildir.
@@ -27,6 +30,7 @@ dev_dependencies:
     sdk: flutter
   # Linting & Code Quality
   json_serializable: ^6.8.0
+  retrofit_generator: ^9.1.2
   very_good_analysis: ^6.0.0
 
 flutter:
