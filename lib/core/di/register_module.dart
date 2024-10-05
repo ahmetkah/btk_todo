@@ -4,6 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core.dart';
 import '/data/data.dart';
 
 @module
@@ -18,7 +19,8 @@ abstract class RegisterModule {
 
   ///
   @singleton
-  TodoClient get tokenClient => TodoClient(dio);
+  TodoClient get tokenClient =>
+      TodoClient(dio..interceptors.add(const TodoInterceptor()));
 
   @singleton
   FlutterSecureStorage get securedStorage => const FlutterSecureStorage();
