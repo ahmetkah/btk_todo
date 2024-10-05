@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../core.dart';
+import '/core/core.dart';
 import '/data/data.dart';
 
 @module

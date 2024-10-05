@@ -1,0 +1,168 @@
+{
+    "@@locale": "tr",
+
+    "appName": "BTK Todo",
+    "@appName": {
+        "description": "Lütfen uygulama adını değiştirmeyin"
+    },
+
+    "applicationVersion": "Uygulama versiyonu",
+    "@applicationVersion": {
+        "description": "Uygulamanın versiyonunu gösteren metin."
+    },
+
+    "authAlreadyAccount": "Zaten bir hesabın var mı?",
+    "@authAlreadyAccount": {
+        "description": "Kayıt olma sayfasında kullanıcının zaten hesabı olup olmadığını soran mesaj."
+    },
+
+    "authButtonLogIn": "Giriş Yap",
+    "@authButtonLogIn": {
+        "description": "Giriş butonu metni."
+    },
+
+    "authButtonLogOut": "Çıkış Yap",
+    "@authButtonLogOut": {
+        "description": "Çıkış butonu metni."
+    },
+
+    "authButtonSignUp": "Kaydol",
+    "@authButtonSignUp": {
+        "description": "Kayıt olma sayfasında kayıt olma butonu metni."
+    },
+
+    "authCreateAccount": "Hesap Oluşturun",
+    "@authCreateAccount": {
+        "description": "Hesap oluşturma işlemi için kullanılan metin."
+    },
+
+    "authRegisterAccount": "Hesap Oluştur ve",
+    "@authRegisterAccount": {
+    "description": "Hesap oluşturma işlemi için kullanılan metin."
+    },
+
+    "authFormErrorsFill": "Lütfen {fieldname} alanını doldurun",
+    "@authFormErrorsFill": {
+        "description": "Boş giriş alanı için hata mesajı.",
+        "placeholders": {
+            "fieldname": {
+                "type": "String"
+            }
+        }
+    },
+
+    "authFormErrorsInvalid": "Lütfen geçerli bir {fieldname} girin",
+    "@authFormErrorsInvalid": {
+        "description": "Geçersiz giriş için hata mesajı.",
+        "placeholders": {
+            "fieldname": {
+                "type": "String"
+            }
+        }
+    },
+
+    "authFormName": "Ad",
+    "@authFormName": {
+        "description": "Ad alanı için etiket."
+    },
+
+    "authFormPassword": "Şifre",
+    "@authFormPassword": {
+        "description": "Şifre alanı etiketi."
+    },
+
+    "authFormSurname": "Soyad",
+    "@authFormSurname": {
+        "description": "Soyad alanı için etiket."
+    },
+
+    "authFormUsername": "Kullanıcı Adı",
+    "@authFormUsername": {
+        "description": "Kullanıcı adı alanı etiketi."
+    },
+
+    "authJoinAppToday": "{appName}'ya katıl",
+    "@authJoinAppToday": {
+        "description": "Kullanıcıları uygulamaya katılmaya teşvik eden metin.",
+        "placeholders": {
+            "appName": {
+                "type": "String"
+            }
+        }
+    },
+
+    "authLoginWelcomeMessage": "Hoşgeldiniz",
+    "@authLoginWelcomeMessage": {
+      "description": "Kullanıcıyı uygulamaya girişte karşılayan hoş geldiniz mesajı."
+    },
+
+    "authNoAccount": "Henüz bir hesabın yok mu?",
+    "@authNoAccount": {
+        "description": "Giriş sayfasında kullanıcının hesabı olup olmadığını soran mesaj."
+    },
+
+    "authSignInToApp": "{appName}'ya giriş yap",
+    "@authSignInToApp": {
+        "description": "Kullanıcıları uygulamaya giriş yapmaya teşvik eden metin.",
+        "placeholders": {
+            "appName": {
+                "type": "String"
+            }
+        }
+    },
+
+    "dividerOrText": "YA DA",
+    "@dividerOrText": {
+      "description": "Butonlar arasında seçim yapmak için gösterilen metin."
+    },
+
+    "landingGreeting": "Merhaba",
+    "@landingGreeting": {
+      "description": "Kullanıcıya giriş ekranında gösterilen merhaba mesajı."
+    },
+
+    "landingMessage": "Hesabınız yoksa bir hesap oluşturun veya giriş yaparak devam edin.",
+    "@landingMessage": {
+      "description": "Kullanıcıya hesap oluşturma veya giriş yaparak devam etme seçeneği sunan açıklama mesajı."
+    },
+
+    "loginMessageError": "Kullanıcı adınızı veya parolanızı kontrol edin",
+    "@loginMessageError": {
+        "description": "Kullanıcı adı veya şifrenin yanlış olduğu durumlarda gösterilen hata mesajı."
+    },
+
+    "loginMessageSuccess": "{email} olarak giriş yaptınız",
+    "@loginMessageSuccess": {
+        "description": "Başarılı bir girişten sonra gösterilen mesaj.",
+        "placeholders": {
+            "email": {
+                "type": "String"
+            }
+        }
+    },
+
+    "logoutMessageSuccess": "Oturumunuz kapatıldı",
+    "@logoutMessageSuccess": {
+        "description": "Kullanıcının çıkış yaptığında gösterilen mesaj."
+    },
+
+    "signupMessageError": "Lütfen kullanıcı adınızı, adınızı, soyadınızı veya şifrenizi kontrol edin",
+    "@signupMessageError": {
+        "description": "Geçersiz veya hatalı kullanıcı adı, ad, soyad veya şifre için hata mesajı."
+    },
+
+    "signupMessageSuccess": "{email} olarak kaydoldu",
+    "@signupMessageSuccess": {
+        "description": "Başarılı bir kayıt işleminden sonra gösterilen mesaj.",
+        "placeholders": {
+            "email": {
+                "type": "String"
+            }
+        }
+    },
+
+    "welcome": "Merhaba",
+    "@welcome": {
+        "description": "Kullanıcıya gösterilen genel karşılama mesajı."
+    }
+}

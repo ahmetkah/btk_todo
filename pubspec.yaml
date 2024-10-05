@@ -13,6 +13,9 @@ dependencies:
   # Flutter SDK'sının projede kullanılacağını belirtir.
   flutter:
     sdk: flutter
+  # Localization (L10N)
+  flutter_localizations:
+    sdk: flutter
   # Cupertino stili iOS ikonları
   cupertino_icons: ^1.0.8
   json_annotation: ^4.9.0
@@ -40,5 +43,10 @@ dev_dependencies:
   retrofit_generator: ^9.1.2
   very_good_analysis: ^6.0.0
 
+# Flutter yapılandırma ayarları
 flutter:
+  # Material Design bileşenlerini kullan
   uses-material-design: true
+
+  # Otomatik dosya üretimini etkinleştir
+  generate: true 

@@ -1,0 +1,13 @@
+# .arb uzantılı dil dosyalarının bulunduğu klasörün dosya yolu.
+arb-dir: lib/core/l10n/
+
+# Temel şablon olarak kullanılacak olan .arb uzantılı dil dosyasının adı.
+template-arb-file: app_en.arb
+
+# İçinde AppLocalizations sınıfının bulunduğu Flutter tarafından otomatik olarak oluşturulacak dosyanın adı.
+output-localization-file: app_localizations.dart
+
+# Henüz çevrilmemiş mesajların yazılacağı dosyanın adı. 
+# Yani temel şablon dil dosyasında bulunan ancak diğer dil dosyalarında bulunmayan eksik çevirileri görmemizi sağlar. 
+# Çeviriler tam ise dosya içeriği {} olarak görünür
+untranslated-messages-file: untranslated_messages.txt

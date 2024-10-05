@@ -1,0 +1,163 @@
+{
+    "@@locale": "en",
+
+    "appName": "BTK Todo",
+    "@appName": {
+        "description": "The name of the application. Please don't change it."
+    },
+
+    "applicationVersion": "Application version",
+    "@applicationVersion": {
+        "description": "Text indicating the version of the application."
+    },
+
+    "authAlreadyAccount": "Have an account already?",
+    "@authAlreadyAccount": {
+        "description": "Prompt asking if the user already has an account on the SignUp page."
+    },
+
+    "authButtonLogIn": "Log In",
+    "@authButtonLogIn": {
+        "description": "Text displayed on the button used to log in."
+    },
+
+    "authButtonLogOut": "Log Out",
+    "@authButtonLogOut": {
+        "description": "Text displayed on the button used to log out."
+    },
+
+    "authButtonSignUp": "Sign Up",
+    "@authButtonSignUp": {
+        "description": "Text displayed on the button used to sign up."
+    },
+
+    "authCreateAccount": "Create account",
+    "@authCreateAccount": {
+        "description": "Text displayed on the button or link used to create a new account."
+    },
+
+    "authRegisterAccount": "Create Account and",
+    "@authRegisterAccount": {
+    "description": "Text used for the create account action."
+    },
+
+    "authFormErrorsFill": "Please fill in the {fieldname} field",
+    "@authFormErrorsFill": {
+        "description": "Error message displayed when a required input field is left empty.",
+        "placeholders": {
+            "fieldname": {
+                "type": "String"
+            }
+        }
+    },
+
+    "authFormErrorsInvalid": "Please enter a valid {fieldname}",
+    "@authFormErrorsInvalid": {
+        "description": "Error message displayed when the input in a field is invalid.",
+        "placeholders": {
+            "fieldname": {
+                "type": "String"
+            }
+        }
+    },
+
+    "authFormName": "Name",
+    "@authFormName": {
+        "description": "Label for the input field where the user enters their first name."
+    },
+
+    "authFormPassword": "Password",
+    "@authFormPassword": {
+        "description": "Label for the input field where the user enters their password."
+    },
+
+    "authFormSurname": "Surname",
+    "@authFormSurname": {
+        "description": "Label for the input field where the user enters their last name."
+    },
+
+    "authFormUsername": "Username",
+    "@authFormUsername": {
+        "description": "Label for the input field where the user enters their username."
+    },
+
+    "authJoinAppToday": "Join {appName} today",
+    "@authJoinAppToday": {
+        "description": "Text encouraging users to join the application today.",
+        "placeholders": {
+            "appName": {
+                "type": "String"
+            }
+        }
+    },
+
+    "authLoginWelcomeMessage": "Welcome",
+    "@authLoginWelcomeMessage": {
+      "description": "Message to welcome the user during the login process."
+    },
+
+    "authNoAccount": "Don't have an account?",
+    "@authNoAccount": {
+        "description": "Prompt asking if the user doesn't have an account on the LogIn page."
+    },
+
+    "authSignInToApp": "Sign in to {appName}",
+    "@authSignInToApp": {
+        "description": "Text encouraging users to sign in to the application.",
+        "placeholders": {
+            "appName": {
+                "type": "String"
+            }
+        }
+    },
+
+    "dividerOrText": "OR",
+    "@dividerOrText": {
+      "description": "Text displayed to indicate a choice between options."
+    },
+
+    "landingGreeting": "Hello",
+    "@landingGreeting": {
+      "description": "Greeting message shown to the user on the landing screen."
+    },
+
+    "landingMessage": "If you don't have an account, create one or continue by logging in.",
+    "@landingMessage": {
+      "description": "A message providing users the option to create an account or continue by logging in."
+    },
+
+    "loginMessageError": "Please check your username or password",
+    "@loginMessageError": {
+        "description": "Error message displayed when the username or password is incorrect."
+    },
+
+    "loginMessageSuccess": "Signed in as {email}",
+    "@loginMessageSuccess": {
+        "description": "Success message displayed after a successful login.",
+        "placeholders": {
+            "email": {
+                "type": "String"
+            }
+        }
+    },
+
+    "logoutMessageSuccess": "You have been logged out.",
+    "@logoutMessageSuccess": {
+        "description": "Message displayed when the user logs out successfully."
+    },
+
+    "signupMessageError": "Please check your username, name, surname, or password",
+    "@signupMessageError": {
+        "description": "Error message displayed when the username, name, surname, or password is incorrect."
+    },
+
+    "signupMessageSuccess": "Signed up as {email}",
+    "@signupMessageSuccess": {
+        "description": "Success message displayed after a successful sign-up.",
+        "placeholders": {
+            "email": {
+                "type": "String"
+            }
+        }
+    }
+}
