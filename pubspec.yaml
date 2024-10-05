@@ -30,12 +30,14 @@ dependencies:
   shared_preferences: ^2.3.2
   formz: ^0.7.0
   flutter_bloc: ^8.1.6
+  flutter_svg: ^2.0.10+1
 
 # Geliştirme ve test süreçlerinde kullanılır
 # Uygulamanın çalışması sırasında gerekli değildir.
 # Derlenmiş projeye dahil edilmez.
 dev_dependencies:
   build_runner: ^2.4.13
+  flutter_gen_runner: ^5.7.0
   flutter_test:
     sdk: flutter
   # Linting & Code Quality
@@ -51,3 +53,19 @@ flutter:
 
   # Otomatik dosya üretimini etkinleştir
   generate: true 
+  
+ # Uygulama varlıklarını (assets) projeye dahil et
+  assets:
+    - assets/icons/
+    - assets/logos/
+
+# FlutterGen Paketi Ayarları
+flutter_gen:
+  # Dosyaların üretileceği klasör
+  output: lib/core/gen
+  # Flutter SVG Paketi ile Entegrasyonu
+  integrations:
+    flutter_svg: true
+
+  # FlutterGen için Terminal Kodu:
+  # dart run build_runner build
