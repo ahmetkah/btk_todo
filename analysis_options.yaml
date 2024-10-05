@@ -1,13 +1,17 @@
-# This file configures the analyzer, which statically analyzes Dart code to
-# check for errors, warnings, and lints.
-#
-# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
-# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
-# invoked from the command line by running `flutter analyze`.
+include: package:very_good_analysis/analysis_options.yaml
 
-# The following line activates a set of recommended lints for Flutter apps,
-# packages, and plugins designed to encourage good coding practices.
-include: package:flutter_lints/flutter.yaml
+analyzer:
+  
+  # Statik Kod Analiz Aracından hariç tutulacak dosyalar #
+  exclude:
+    ### [Eklediklerim] ###
+    - "**.g.dart"
+    - "**.freezed.dart"
+    - "**.config.dart"
+    - "**.chopper.dart"
+    - "**.mocks.dart"
+    - lib/app/generated/**.dart
+    - lib/app/generated/**include: package:very_good_analysis/analysis_options.yaml
 
 linter:
   # The lint rules applied to this project can be customized in the
@@ -26,3 +30,40 @@ linter:
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+
+    
+  
+  # Aşağıdakileri Error/Hata olarak nitele #
+  errors:
+   ### [Eklediklerim] ###
+    invalid_assignment: warning
+    dead_code: info
+    todo: ignore
+    unawaited_futures: warning
+    unused_import: warning
+    invalid_annotation_target: ignore
+
+# Dart dili için katı kuralları etkinleştir #
+  language:
+    
+linter:
+  rules:
+    ### [Eklediklerim - True] ###,
+    # DecoratedBox'ı tercih et
+    use_decorated_box: true
+    # tek bir ifade döndüren fonksiyonlar için süslü parantez {} yerine => (ok) kullan
+    # prefer_expression_function_bodies: true
+    # lib/ dizini içindekiler için Relative import'u tercih et#
+    prefer_relative_imports: true
+    
+    ### [Değiştirdiklerim - False] ###
+    # Proje içi importlarda paket bazlı import kullanımını zorunlu tutma
+    always_use_package_imports: false
+    # TODO yorum stilin zorunlu tutma
+    flutter_style_todos: false
+    # Kod satır uzunluğu 80 karakteri geçebilir
+    lines_longer_than_80_chars: false
+    # Public üye ve API dokümantasyonu için /// şeklindeki dokümantasyon yorumlarını zorunlu tutma.
+    public_member_api_docs: false
+    # pubspec.yaml dosyasındaki bağımlılıkların alfabetik olarak sıralanmasını zorunlu tutma.
+    sort_pub_dependencies: false
