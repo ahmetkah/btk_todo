@@ -32,7 +32,7 @@ class AuthRepository implements IAuthRepository {
 
   ///
   @override
-  Future<Either<LoginFailure, AuthResponse>> loginUser({
+  Future<Either<AuthFailure, AuthResponse>> loginUser({
     required LoginRequest request,
   }) async {
     /// [Giriş Yap]
@@ -42,7 +42,7 @@ class AuthRepository implements IAuthRepository {
       /// Kullanıcı [Girişi Başarısız] ise
       if (response.success == null || !response.success!) {
         return const Left(
-          LoginFailure(
+          AuthFailure(
             message: 'Giriş Başarısız',
           ),
         );
@@ -64,7 +64,7 @@ class AuthRepository implements IAuthRepository {
     } catch (e) {
       ///
       return Left(
-        LoginFailure(
+        AuthFailure(
           message: '$e',
         ),
       );
@@ -73,7 +73,7 @@ class AuthRepository implements IAuthRepository {
 
   /// [Kaydol Metodu]
   @override
-  Future<Either<LoginFailure, AuthResponse>> registerUser({
+  Future<Either<AuthFailure, AuthResponse>> registerUser({
     required RegisterRequest request,
   }) async {
     try {
@@ -83,7 +83,7 @@ class AuthRepository implements IAuthRepository {
       /// [Başarısız ise]
       if (!response.success!) {
         return const Left(
-          LoginFailure(
+          AuthFailure(
             message: 'Kayıt İşlemi Başarısız',
           ),
         );
@@ -103,7 +103,7 @@ class AuthRepository implements IAuthRepository {
     } catch (e) {
       ///
       return Left(
-        LoginFailure(
+        AuthFailure(
           message: '$e',
         ),
       );
@@ -111,7 +111,7 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future<Either<LoginFailure, Unit>> logout() async {
+  Future<Either<AuthFailure, Unit>> logout() async {
     try {
       ///
       await Future<void>.delayed(const Duration(milliseconds: 500));
@@ -127,11 +127,11 @@ class AuthRepository implements IAuthRepository {
 
       /// Alternatif Kullanım:
       /// return right(unit);
-      return const Right<LoginFailure, Unit>(unit);
+      return const Right<AuthFailure, Unit>(unit);
     } catch (e) {
       ///
       return Left(
-        LoginFailure(
+        AuthFailure(
           message: '$e',
         ),
       );

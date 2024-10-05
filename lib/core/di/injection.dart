@@ -6,8 +6,8 @@ import 'injection.config.dart';
 /// Global tanımlanan [Service Locator] instance'ı
 final GetIt getIt = GetIt.instance;
 
-/// 
+///
 @InjectableInit()
 
 ///
-void configureDependencies() => getIt.init();
+Future<void> configureDependencies() async => getIt.init();

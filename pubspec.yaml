@@ -23,6 +23,8 @@ dependencies:
   get_it: ^8.0.0
   injectable: ^2.5.0
   dartz: ^0.10.1
+  flutter_secure_storage: ^4.2.1
+  shared_preferences: ^2.3.2
 
 # Geliştirme ve test süreçlerinde kullanılır
 # Uygulamanın çalışması sırasında gerekli değildir.

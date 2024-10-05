@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'app.dart';
 import 'core/core.dart';
 
-void main() {
+void main() async {
   /// Initialize [Service Locator]
-  configureDependencies();
+  await configureDependencies();
 
   ///
   runApp(
