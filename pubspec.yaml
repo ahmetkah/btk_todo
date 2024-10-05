@@ -29,6 +29,7 @@ dependencies:
   flutter_secure_storage: ^4.2.1
   shared_preferences: ^2.3.2
   formz: ^0.7.0
+  flutter_bloc: ^8.1.6
 
 # Geliştirme ve test süreçlerinde kullanılır
 # Uygulamanın çalışması sırasında gerekli değildir.
