@@ -35,7 +35,7 @@ class _TodoClient implements TodoClient {
     )
         .compose(
           _dio.options,
-          'api/users/logout',
+          '/api/users/logout',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -68,7 +68,7 @@ class _TodoClient implements TodoClient {
     )
         .compose(
           _dio.options,
-          'api/todos',
+          '/api/todos',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -101,7 +101,7 @@ class _TodoClient implements TodoClient {
     )
         .compose(
           _dio.options,
-          'api/todos/${id}',
+          '/api/todos/${id}',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -138,7 +138,7 @@ class _TodoClient implements TodoClient {
     )
         .compose(
           _dio.options,
-          'api/todos/${id}',
+          '/api/todos/${id}',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -171,7 +171,7 @@ class _TodoClient implements TodoClient {
     )
         .compose(
           _dio.options,
-          'api/todos/${id}',
+          '/api/todos/${id}',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -205,7 +205,7 @@ class _TodoClient implements TodoClient {
     )
         .compose(
           _dio.options,
-          'api/todos',
+          '/api/todos',
           queryParameters: queryParameters,
           data: _data,
         )

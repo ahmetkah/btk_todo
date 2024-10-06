@@ -16,6 +16,7 @@ import 'package:btk_todo/domain/auth_repository.dart' as _i116;
 import 'package:btk_todo/domain/domain.dart' as _i919;
 import 'package:btk_todo/domain/storage_repository.dart' as _i440;
 import 'package:btk_todo/domain/todo_repository.dart' as _i813;
+import 'package:btk_todo/todo/cubit/todo_cubit.dart' as _i44;
 import 'package:dio/dio.dart' as _i361;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i558;
 import 'package:get_it/get_it.dart' as _i174;
@@ -51,6 +52,8 @@ extension GetItInjectableX on _i174.GetIt {
           todoClient: gh<_i1056.TodoClient>(),
           storageRepository: gh<_i919.IStorageRepository>(),
         ));
+    gh.factory<_i44.TodoCubit>(
+        () => _i44.TodoCubit(todoRepository: gh<_i919.ITodoRepository>()));
     gh.singleton<_i116.IAuthRepository>(() => _i116.AuthRepository(
           authClient: gh<_i1056.AuthClient>(),
           storageRepository: gh<_i919.IStorageRepository>(),

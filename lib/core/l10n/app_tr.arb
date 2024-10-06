@@ -146,6 +146,11 @@
         "description": "Kullanıcının çıkış yaptığında gösterilen mesaj."
     },
 
+    "noTodosMessage": "Harika! Şu anda yapılacak işin yok.",
+    "@noTodosMessage": {
+      "description": "Gösterilecek yapılacak bir iş olmadığında kullanıcının göreceği mesaj"
+    },
+
     "signupMessageError": "Lütfen kullanıcı adınızı, adınızı, soyadınızı veya şifrenizi kontrol edin",
     "@signupMessageError": {
         "description": "Geçersiz veya hatalı kullanıcı adı, ad, soyad veya şifre için hata mesajı."

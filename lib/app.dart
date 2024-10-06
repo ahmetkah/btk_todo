@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'auth/auth.dart';
 import 'core/core.dart';
+import 'todo/todo.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -19,6 +20,9 @@ class App extends StatelessWidget {
         ),
         BlocProvider<SignupBloc>(
           create: (context) => getIt<SignupBloc>(),
+        ),
+        BlocProvider<TodoCubit>(
+          create: (context) => getIt<TodoCubit>()..fetchAllTodos(),
         ),
       ],
       child: MaterialApp.router(

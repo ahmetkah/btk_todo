@@ -146,6 +146,11 @@
         "description": "Message displayed when the user logs out successfully."
     },
 
+    "noTodosMessage": "Awesome! You have no tasks to do right now.",
+    "@noTodosMessage": {
+      "description": "Message displayed when there are no tasks to show"
+    },
+
     "signupMessageError": "Please check your username, name, surname, or password",
     "@signupMessageError": {
         "description": "Error message displayed when the username, name, surname, or password is incorrect."
