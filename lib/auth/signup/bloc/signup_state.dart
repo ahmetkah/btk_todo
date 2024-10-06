@@ -1,6 +1,6 @@
-part of 'register_bloc.dart';
+part of 'signup_bloc.dart';
 
-enum RegisterStatus {
+enum SignupStatus {
   unknown, // Başlangıç durumu, oturum durumu bilinmiyor.
   authenticated, // Kullanıcı başarıyla doğrulanmış.
   unAuthenticated, // Kullanıcı doğrulanamamış.
@@ -9,15 +9,15 @@ enum RegisterStatus {
   edit, // Kullanıcı bilgileri düzenleniyor.
 }
 
-final class RegisterState extends Equatable {
+final class SignupState extends Equatable {
   ///
-  const RegisterState({
+  const SignupState({
     this.username = const UsernameInput.pure(),
     this.name = const NameInput.pure(),
     this.surname = const NameInput.pure(),
     this.password = const PasswordInput.pure(),
     this.isValid = false,
-    this.status = RegisterStatus.unknown,
+    this.status = SignupStatus.unknown,
   });
 
   /// Form Alanlarının
@@ -30,18 +30,18 @@ final class RegisterState extends Equatable {
   final bool isValid;
 
   ///
-  final RegisterStatus status;
+  final SignupStatus status;
 
   ///
-  RegisterState copyWith({
+  SignupState copyWith({
     UsernameInput? username,
     NameInput? name,
     NameInput? surname,
     PasswordInput? password,
     bool? isValid,
-    RegisterStatus? status,
+    SignupStatus? status,
   }) {
-    return RegisterState(
+    return SignupState(
       username: username ?? this.username,
       name: name ?? this.name,
       surname: surname ?? this.surname,

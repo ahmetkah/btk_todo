@@ -1,14 +1,14 @@
-part of 'register_bloc.dart';
+part of 'signup_bloc.dart';
 
-sealed class RegisterEvent extends Equatable {
-  const RegisterEvent();
+sealed class SignupEvent extends Equatable {
+  const SignupEvent();
 
   @override
   List<Object> get props => [];
 }
 
-final class RegisterUsernameChanged extends RegisterEvent {
-  const RegisterUsernameChanged(this.username);
+final class SignupUsernameChanged extends SignupEvent {
+  const SignupUsernameChanged(this.username);
 
   final String username;
 
@@ -16,8 +16,8 @@ final class RegisterUsernameChanged extends RegisterEvent {
   List<Object> get props => [username];
 }
 
-final class RegisterNameChanged extends RegisterEvent {
-  const RegisterNameChanged(this.name);
+final class SignupNameChanged extends SignupEvent {
+  const SignupNameChanged(this.name);
 
   final String name;
 
@@ -25,8 +25,8 @@ final class RegisterNameChanged extends RegisterEvent {
   List<Object> get props => [name];
 }
 
-final class RegisterSurnameChanged extends RegisterEvent {
-  const RegisterSurnameChanged(this.surname);
+final class SignupSurnameChanged extends SignupEvent {
+  const SignupSurnameChanged(this.surname);
 
   final String surname;
 
@@ -34,8 +34,8 @@ final class RegisterSurnameChanged extends RegisterEvent {
   List<Object> get props => [surname];
 }
 
-final class RegisterPasswordChanged extends RegisterEvent {
-  const RegisterPasswordChanged(this.password);
+final class SignupPasswordChanged extends SignupEvent {
+  const SignupPasswordChanged(this.password);
 
   final String password;
 
@@ -43,8 +43,8 @@ final class RegisterPasswordChanged extends RegisterEvent {
   List<Object> get props => [password];
 }
 
-class RegisterSubmitted extends RegisterEvent {
-  const RegisterSubmitted(
+class SignupSubmitted extends SignupEvent {
+  const SignupSubmitted(
     this.username,
     this.name,
     this.surname,
