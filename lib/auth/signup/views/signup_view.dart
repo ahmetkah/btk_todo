@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 //import 'package:go_router/go_router.dart';
 
 import '/auth/auth.dart';
@@ -260,8 +261,8 @@ class _SignupButton extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(snackBar);
 
-          /// [Dashboard Sayfasına Git]
-          /// _goDashboardView(context);
+          /// [Todo Sayfasına Git]
+          _goTodoView(context);
         }
       },
 
@@ -303,8 +304,7 @@ class _SignupButton extends StatelessWidget {
     );
   }
 
-  // [28. Adım]
-  //void _goDashboardView(BuildContext context) => context.go('/dashboard');
+  void _goTodoView(BuildContext context) => context.go(AppRouteName.todo.path);
 }
 
 class _HaveAnAccountAlready extends StatelessWidget {
@@ -313,16 +313,16 @@ class _HaveAnAccountAlready extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppTextButton(
-      onPressed: () {},
-
       /// [Login Sayfasına Git]
-      ///  [28. Adım]
-      /// onPressed: () => _goLoginView(context),
+
+      onPressed: () => _goLoginView(context),
 
       primaryText: context.translate.authAlreadyAccount,
       actionText: context.translate.authButtonLogIn,
     );
   }
+
   // [28. Adım]
-  // void _goLoginView(BuildContext context) => context.go('/login');
+  void _goLoginView(BuildContext context) =>
+      context.go(AppRouteName.login.path);
 }

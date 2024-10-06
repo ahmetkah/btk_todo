@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:go_router/go_router.dart';
+import 'package:go_router/go_router.dart';
 
 import '/core/core.dart';
 import '/domain/domain.dart';
@@ -88,9 +88,8 @@ class _GoSignupViewButton extends StatelessWidget {
     return AppElevatedButton(
       ///
       onPressed: () {
-        //[28. Adımda]
-        //_goSignupView(context);
-        debugPrint('');
+        /// [Signup Sayfasına Git]
+        _goSignupView(context);
 
         /// Uygulamanın ilk açılış durumunu depolar.
         _storeFirstAppOpenStatus();
@@ -106,7 +105,8 @@ class _GoSignupViewButton extends StatelessWidget {
     );
   }
 
-  // [28. Adımda] void _goSignupView(BuildContext context) => context.go('/signup');
+  void _goSignupView(BuildContext context) =>
+      context.go(AppRouteName.signup.path);
 
   Future<void> _storeFirstAppOpenStatus() async {
     /// Uygulama cihazda ilk defa açıldığı için isFirstTimeAppOpen'ı [false] yap
@@ -163,9 +163,8 @@ class _GoLoginViewButton extends StatelessWidget {
 
       ///
       onPressed: () {
-        // [28. Adımda]
-        // _goLoginView(context);
-        debugPrint('');
+        /// [LoginView Sayfasına Git]
+        _goLoginView(context);
 
         /// Uygulamanın ilk açılış durumunu depolar.
         _storeFirstAppOpenStatus();
@@ -181,8 +180,8 @@ class _GoLoginViewButton extends StatelessWidget {
     );
   }
 
-  //  // [28. Adımda]
-  //void _goLoginView(BuildContext context) => context.go('/login');
+  void _goLoginView(BuildContext context) =>
+      context.go(AppRouteName.login.path);
 
   Future<void> _storeFirstAppOpenStatus() async {
     /// Uygulama cihazda ilk defa açıldığı için isFirstTimeAppOpen'ı [false] yap
