@@ -9,7 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:btk_todo/auth/login/bloc/login_bloc.dart' as _i757;
-import 'package:btk_todo/auth/register/bloc/register_bloc.dart' as _i601;
+import 'package:btk_todo/auth/signup/bloc/signup_bloc.dart' as _i303;
 import 'package:btk_todo/core/di/register_module.dart' as _i905;
 import 'package:btk_todo/data/data.dart' as _i1056;
 import 'package:btk_todo/domain/auth_repository.dart' as _i116;
@@ -55,10 +55,10 @@ extension GetItInjectableX on _i174.GetIt {
           authClient: gh<_i1056.AuthClient>(),
           storageRepository: gh<_i919.IStorageRepository>(),
         ));
+    gh.factory<_i303.SignupBloc>(
+        () => _i303.SignupBloc(authRepository: gh<_i919.IAuthRepository>()));
     gh.factory<_i757.LoginBloc>(
         () => _i757.LoginBloc(authRepository: gh<_i919.IAuthRepository>()));
-    gh.factory<_i601.RegisterBloc>(
-        () => _i601.RegisterBloc(authRepository: gh<_i919.IAuthRepository>()));
     return this;
   }
 }

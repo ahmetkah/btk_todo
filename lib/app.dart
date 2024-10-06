@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'auth/auth.dart';
 import 'core/core.dart';
 
 class App extends StatelessWidget {
@@ -8,21 +10,36 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'BTK Todo',
+    ///
+    return MultiBlocProvider(
+      ///
+      providers: [
+        BlocProvider<LoginBloc>(
+          create: (context) => getIt<LoginBloc>(),
+        ),
+        BlocProvider<SignupBloc>(
+          create: (context) => getIt<SignupBloc>(),
+        ),
+      ],
+      child: MaterialApp.router(
+        title: 'BTK Todo',
+        debugShowCheckedModeBanner: false,
 
-      /// [Router]
-      routerConfig: appRouter,
+        /// [Router]
+        routerConfig: appRouter,
 
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
+        /// [Theme]
+        theme: AppTheme.lightTheme,
 
-      /// [L10n]
-      /// Delegate: Temsilci Listesi
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+        ///darkTheme: AppTheme.darkTheme,
 
-      /// Desteklenen Diller
-      supportedLocales: AppLocalizations.supportedLocales,
+        /// [L10n]
+        /// Delegate: Temsilci Listesi
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+
+        /// Desteklenen Diller
+        supportedLocales: AppLocalizations.supportedLocales,
+      ),
     );
   }
 }
