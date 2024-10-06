@@ -11,17 +11,29 @@ import '/data/data.dart';
 abstract class RegisterModule {
   ///
   @singleton
-  Dio get dio => Dio()..interceptors.add(PrettyDioLogger());
+  Dio get dio => Dio(
+        BaseOptions(
+          baseUrl: EnvConf.baseUrl,
+        ),
+      )..interceptors.add(
+          PrettyDioLogger(),
+        );
 
   ///
   @singleton
-  AuthClient get authClient => AuthClient(dio);
+  TodoClient get authClient => TodoClient(
+        dio
+          ..interceptors.add(
+            const TodoInterceptor(),
+          ),
+      );
 
   ///
   @singleton
-  TodoClient get tokenClient =>
-      TodoClient(dio..interceptors.add(const TodoInterceptor()));
+  AuthClient get tokenClient =>
+      AuthClient(dio..interceptors.add(PrettyDioLogger()));
 
+  ///
   @singleton
   FlutterSecureStorage get securedStorage => const FlutterSecureStorage();
 

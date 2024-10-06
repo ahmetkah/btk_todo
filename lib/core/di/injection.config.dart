@@ -39,8 +39,8 @@ extension GetItInjectableX on _i174.GetIt {
       preResolve: true,
     );
     gh.singleton<_i361.Dio>(() => registerModule.dio);
-    gh.singleton<_i1056.AuthClient>(() => registerModule.authClient);
-    gh.singleton<_i1056.TodoClient>(() => registerModule.tokenClient);
+    gh.singleton<_i1056.TodoClient>(() => registerModule.authClient);
+    gh.singleton<_i1056.AuthClient>(() => registerModule.tokenClient);
     gh.singleton<_i558.FlutterSecureStorage>(
         () => registerModule.securedStorage);
     gh.factory<_i440.IStorageRepository>(() => _i440.StorageRepository(
