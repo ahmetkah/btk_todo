@@ -1,0 +1,14 @@
+ # 1. Paketi Ekle
+ # 2. YAML dosyası oluştur
+ # 3. Dosyanın içine -yani buraya- parametreleri ekle
+ # 4. Komutu çalıştır
+flutter_native_splash:
+  image: assets/logos/splash_logo.png
+  color: "#ffffff"
+  fullscreen: true
+  android_12:
+    image: assets/logos/splash_logo.png
+    icon_background_color: "#ffffff"
+
+# Terminal Kodu:
+# dart run flutter_native_splash:create --path=native_splash.yaml
