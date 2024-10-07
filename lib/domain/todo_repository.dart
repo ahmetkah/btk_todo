@@ -19,7 +19,7 @@ abstract class ITodoRepository {
     required TodoRequest request,
   });
   Future<Either<TodoFailure, TodoDeleteResponse>> deleteTodo({
-    required int id,
+    required String id,
   });
 }
 
@@ -147,7 +147,7 @@ class TodoRepository implements ITodoRepository {
   /// [5 Todoyu Sil]
   @override
   Future<Either<TodoFailure, TodoDeleteResponse>> deleteTodo({
-    required int id,
+    required String id,
   }) async {
     try {
       final response = await todoClient.deleteTodo(id);

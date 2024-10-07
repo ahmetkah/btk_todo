@@ -12,37 +12,32 @@ class TodoState extends Equatable {
   ///
   const TodoState({
     this.status = TodoStatus.initial,
-    this.todoListResponse = const TodoListResponse(),
-    this.todoResponse = const TodoResponse(),
-    this.todoDeleteResponse = const TodoDeleteResponse(),
+    this.listTodo = const <TodoData>[],
+    this.todoData = const TodoData(),
   });
 
   ///
   final TodoStatus status;
-  final TodoListResponse todoListResponse;
-  final TodoResponse todoResponse;
-  final TodoDeleteResponse todoDeleteResponse;
+  final List<TodoData> listTodo;
+  final TodoData todoData;
 
   ///
   TodoState copyWith({
     TodoStatus? status,
-    TodoListResponse? todoListResponse,
-    TodoResponse? todoResponse,
-    TodoDeleteResponse? todoDeleteResponse,
+    List<TodoData>? listTodo,
+    TodoData? todoData,
   }) {
     return TodoState(
       status: status ?? this.status,
-      todoListResponse: todoListResponse ?? this.todoListResponse,
-      todoResponse: todoResponse ?? this.todoResponse,
-      todoDeleteResponse: todoDeleteResponse ?? this.todoDeleteResponse,
+      listTodo: listTodo ?? this.listTodo,
+      todoData: todoData ?? this.todoData,
     );
   }
 
   @override
   List<Object> get props => [
         status,
-        todoListResponse,
-        todoResponse,
-        todoDeleteResponse,
+        listTodo,
+        todoData,
       ];
 }

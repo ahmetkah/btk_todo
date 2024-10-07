@@ -51,7 +51,7 @@ class _TodoViewBody extends StatelessWidget {
 
           ///
           TodoStatus.success => _SuccessTodos(
-              todos: state.todoListResponse.data!,
+              todos: state.listTodo,
             ),
 
           ///
@@ -92,7 +92,7 @@ class _SuccessTodos extends StatelessWidget {
             /// Sonda
             trailing: IconButton(
               onPressed: () {
-                final id = int.parse(todos[index].id!);
+                final id = todos[index].id!;
                 read.removeTodo(id: id);
               },
               icon: const Icon(

@@ -159,7 +159,7 @@ class _TodoClient implements TodoClient {
   }
 
   @override
-  Future<TodoDeleteResponse> deleteTodo(int id) async {
+  Future<TodoDeleteResponse> deleteTodo(String id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

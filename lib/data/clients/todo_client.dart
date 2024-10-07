@@ -36,7 +36,7 @@ abstract class TodoClient {
 
   @DELETE('${AppUrls.todos}/{id}')
   Future<TodoDeleteResponse> deleteTodo(
-    @Path('id') int id,
+    @Path('id') String id,
   );
 
   @POST(AppUrls.todos)

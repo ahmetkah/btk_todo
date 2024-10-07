@@ -46,7 +46,7 @@ class TodoCubit extends Cubit<TodoState> {
             : emit(
                 state.copyWith(
                   status: TodoStatus.success,
-                  todoListResponse: response,
+                  listTodo: response.data,
                 ),
               );
       },
@@ -75,15 +75,15 @@ class TodoCubit extends Cubit<TodoState> {
         return emit(
           state.copyWith(
             status: TodoStatus.success,
-            todoResponse: response,
+            todoData: response.data,
           ),
         );
       },
     );
   }
 
-  /// insertTodo
-  Future<void> removeTodo({required int id}) async {
+  /// removeTodo
+  Future<void> removeTodo({required String id}) async {
     /// Yükleme durumunu yayınla
     emit(state.copyWith(status: TodoStatus.loading));
 
@@ -92,22 +92,27 @@ class TodoCubit extends Cubit<TodoState> {
 
     ///
     result.fold(
-      /// [Handle left]: Error Type
-      (TodoFailure failure) => emit(
-        state.copyWith(
-          status: TodoStatus.failure,
-        ),
-      ),
 
-      /// [Handle right]: Response Type
-      (response) {
-        return emit(
-          state.copyWith(
-            status: TodoStatus.success,
-            todoDeleteResponse: response,
-          ),
-        );
-      },
-    );
+        /// [Handle left]: Error Type
+        (TodoFailure failure) => emit(
+              state.copyWith(
+                status: TodoStatus.failure,
+              ),
+            ),
+
+        /// [Handle right]: Response Type
+        (response) {
+      /// state.listTodo içeriğiyle [yeni bir liste oluştur]
+      /// ve REST API'den gelen id ile eşleşen öğeyi bu listeden [SİL]
+      final updatedList = List.of(state.listTodo)
+        ..removeWhere((todo) => todo.id == id);
+
+      return emit(
+        state.copyWith(
+          status: TodoStatus.success,
+          listTodo: updatedList,
+        ),
+      );
+    });
   }
 }
